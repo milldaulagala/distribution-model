@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @workorder.date %>
+</p>
+
+<p>
+  <strong>Workorder number:</strong>
+  <%= @workorder.workorder_number %>
+</p>
+
+<p>
+  <strong>Coil size:</strong>
+  <%= @workorder.coil_size %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @workorder.weight %>
+</p>
+
+<p>
+  <strong>Number of coils:</strong>
+  <%= @workorder.number_of_coils %>
+</p>
+
+<p>
+  <strong>Coils delivered:</strong>
+  <%= @workorder.coils_delivered %>
+</p>
+
+<%= link_to 'Edit', edit_workorder_path(@workorder) %> |
+<%= link_to 'Back', workorders_path %>

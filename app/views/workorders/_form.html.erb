@@ -1,0 +1,47 @@
+<%= form_with(model: workorder, local: true) do |form| %>
+  <% if workorder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(workorder.errors.count, "error") %> prohibited this workorder from being saved:</h2>
+
+      <ul>
+      <% workorder.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, id: :workorder_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :workorder_number %>
+    <%= form.text_field :workorder_number, id: :workorder_workorder_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coil_size %>
+    <%= form.text_field :coil_size, id: :workorder_coil_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weight %>
+    <%= form.text_field :weight, id: :workorder_weight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_coils %>
+    <%= form.number_field :number_of_coils, id: :workorder_number_of_coils %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coils_delivered %>
+    <%= form.number_field :coils_delivered, id: :workorder_coils_delivered %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
